@@ -20,8 +20,6 @@ RUN chmod +x /usr/local/bin/docker-compose
 
 #Install JFrog CLI and Helm CLI
 RUN curl -fL https://getcli.jfrog.io | sh && mv jfrog /usr/local/bin/jfrog && chmod 777 /usr/local/bin/jfrog
-RUN curl -fL -O https://storage.googleapis.com/kubernetes-helm/helm-v2.9.0-linux-amd64.tar.gz && tar -xvf helm-v2.9.0-linux-amd64.tar.gz && mv linux-amd64/helm /usr/local/bin/helm && rm -f helm-v2.9.0-linux-amd64.tar.gz && chmod 777 /usr/local/bin/helm
-
-USER jenkins
+RUN curl -fL -O https://storage.googleapis.com/kubernetes-helm/helm-v2.9.1-linux-amd64.tar.gz && tar -xvf helm-v2.9.1-linux-amd64.tar.gz && mv linux-amd64/helm /usr/local/bin/helm && rm -f helm-v2.9.1-linux-amd64.tar.gz && chmod 777 /usr/local/bin/helm
 
 ENTRYPOINT ["jenkins-slave"]
