@@ -7,6 +7,7 @@ Jenkins agent docker image for kubernetes
 * curl 
 * wget 
 * nano
+* docker
 * docker-compose
 * JFrog-cli
 * Helm
